@@ -1,6 +1,1 @@
-airflow.cfg
-standalone_admin_password.txt
-airflow.db
-webserver_config.py
-logs/
-dags/__pycache__
+__pycache__/
