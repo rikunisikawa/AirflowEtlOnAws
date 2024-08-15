@@ -14,8 +14,8 @@ sudo apt update
 sudo apt -y install postgresql
 
 # S3とpostgresqlを接続する設定
-https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/USER_PostgreSQL.S3Import.html
-EC2でpostgresに接続後
+https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/USER_PostgreSQL.S3Import.html　　
+EC2でpostgresに接続後　　
 CREATE EXTENSION aws_s3 CASCADE;
 
 # IAMポリシー作成
