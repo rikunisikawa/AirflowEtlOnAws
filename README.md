@@ -1,7 +1,10 @@
+# 構成図
+![構成図](https://github.com/rikunisikawa/AirflowEtlOnAws/diagram.png)
+
 # AirflowEtlOnAws
 AirflowEtlOnAws
 
-
+.git
 # postgresqlに接続するために必要
 sudo pip install apache-airflow-providers-postgres
 
