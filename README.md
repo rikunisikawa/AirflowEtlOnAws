@@ -1,5 +1,5 @@
 # 構成図
-![構成図](https://github.com/rikunisikawa/AirflowEtlOnAws/diagram.png)
+![構成図](https://github.com/rikunisikawa/AirflowEtlOnAws/blob/main/diagram.png)
 
 # AirflowEtlOnAws
 AirflowEtlOnAws
