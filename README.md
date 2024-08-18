@@ -1,8 +1,38 @@
+# 
+API接続の確認
+
+タスクID: check_connection_to_api  
+- API（https://apis.codante.io/olympic-games/events）への接続を確認
+
+タスクID: extract_basketball_result
+- オリンピックのAPIからバスケットボールイベントのデータを抽出
+- CSVファイルとして保存します。
+- S3へのアップロード
+
+タスクID: transform_s3  
+- 生成されたCSVファイルをS3バケットにアップロード  
+- S3ファイル名はXComを介して次の処理で使用する  
+PostgreSQLへの変換とロード  
+
+タスクグループID: transform_postgres  
+テーブルの作成:  
+- タスクID: tsk_create_table_1  
+- テーブルが存在しない場合は作成  
+テーブルのクリア:  
+- タスクID: tsk_truncate_table
+- 新しいデータをロードする準備のため、既存のテーブルをクリア（トランケート）
+S3からPostgreSQLへのデータロード:
+- タスクID: tsk_uploadS3_to_postgres
+- S3に保存されたCSVファイルからPostgreSQLテーブルにデータをロード
+- aws_s3.table_import_from_s3関数を使用してデータをインポート
+
+# 内容
+パリオリンピック バスケットボール ETLパイプライン
+AWS上でairflowを用いたETLパイプラインの作成
+
 # 構成図
 ![構成図](https://github.com/rikunisikawa/AirflowEtlOnAws/blob/main/diagram.png)
 ![AirflowDag](https://github.com/rikunisikawa/AirflowEtlOnAws/blob/main/dag.png)
-# 内容
-AWS上でairflowを用いたETLパイプラインの作成
 
 # PostgreSQLに接続するための手順
 ## Airflowでpostgresqlに接続するために必要
