@@ -1,6 +1,6 @@
 # 構成図
 ![構成図](https://github.com/rikunisikawa/AirflowEtlOnAws/blob/main/diagram.png)
-
+![AirflowDag](https://github.com/rikunisikawa/AirflowEtlOnAws/blob/main/dag.png)
 # 内容
 AWS上でairflowを用いたETLパイプラインの作成
 
