@@ -10,7 +10,8 @@ AWS上でairflowを用いたETLパイプラインの作成
 
 # ETLパイプライン概要
 タスクID: check_connection_to_api  
-- APIへの接続を確認（https://apis.codante.io/olympic-games/events）
+- APIへの接続を確認
+- https://apis.codante.io/olympic-games/events
 
 タスクID: extract_basketball_result
 - オリンピックのAPIからバスケットボールイベントのデータを抽出
