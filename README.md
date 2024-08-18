@@ -14,13 +14,11 @@ AWS上でairflowを用いたETLパイプラインの作成
 
 タスクID: extract_basketball_result
 - オリンピックのAPIからバスケットボールイベントのデータを抽出
-- CSVファイルとして保存します。
-- S3へのアップロード
+- CSVファイルとしてEC2に保存
 
 タスクID: transform_s3  
-- 生成されたCSVファイルをS3バケットにアップロード  
+- EC2上のCSVファイルをS3バケットにアップロード  
 - S3ファイル名はXComを介して次の処理で使用する  
-PostgreSQLへの変換とロード  
 
 タスクグループID: transform_postgres  
 テーブルの作成:  
