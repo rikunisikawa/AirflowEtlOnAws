@@ -1,9 +1,11 @@
 # 内容
-パリオリンピック バスケットボール ETLパイプライン
-AWS上でairflowを用いたETLパイプラインの作成
+パリオリンピック バスケットボール ETLパイプライン  
+AWS上でairflowを用いたETLパイプラインの作成  
 
 # 構成図
+## AWS
 ![構成図](https://github.com/rikunisikawa/AirflowEtlOnAws/blob/main/diagram.png)
+## Airflow ETL
 ![AirflowDag](https://github.com/rikunisikawa/AirflowEtlOnAws/blob/main/dag.png)
 
 # ETLパイプライン概要
