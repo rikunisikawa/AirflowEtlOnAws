@@ -22,16 +22,16 @@ AWS上でairflowを用いたETLパイプラインの作成
 - S3ファイル名はXComを介して次の処理で使用する  
 
 タスクグループID: transform_postgres  
-テーブルの作成:  
-- タスクID: tsk_create_table_1  
-- テーブルが存在しない場合は作成  
-テーブルのクリア:  
-- タスクID: tsk_truncate_table
-- 新しいデータをロードする準備のため、既存のテーブルをクリア（トランケート）
-S3からPostgreSQLへのデータロード:
-- タスクID: tsk_uploadS3_to_postgres
-- S3に保存されたCSVファイルからPostgreSQLテーブルにデータをロード
-- aws_s3.table_import_from_s3関数を使用してデータをインポート
+- テーブルの作成:  
+タスクID: tsk_create_table_1  
+テーブルが存在しない場合は作成  
+- テーブルのクリア:  
+タスクID: tsk_truncate_table
+新しいデータをロードする準備のため、既存のテーブルをクリア（トランケート）
+- S3からPostgreSQLへのデータロード:
+タスクID: tsk_uploadS3_to_postgres
+S3に保存されたCSVファイルからPostgreSQLテーブルにデータをロード
+aws_s3.table_import_from_s3関数を使用してデータをインポート
 
 # PostgreSQLに接続するための手順
 ## Airflowでpostgresqlに接続するために必要
